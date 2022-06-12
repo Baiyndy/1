@@ -1,0 +1,17 @@
+
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        int sum = 0;
+        Console.Write("Последовательность начинается с ");
+        int A = int.Parse(Console.ReadLine());
+        while (A >= 0)
+        {
+            sum = sum + A;
+            A--;
+        }
+        Console.WriteLine(sum);
+    }
+}
