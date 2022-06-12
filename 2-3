@@ -1,0 +1,16 @@
+using System;
+class Program
+{
+    static void Main(string[] args)
+        {
+            Console.Write("Введите число - ");
+            int a = int.Parse(Console.ReadLine());
+            Console.Write("Введите месяц - ");
+            int b = int.Parse(Console.ReadLine());
+            Console.Write("Введите год - ");
+            int c = int.Parse(Console.ReadLine());
+            var uli = new DateTime(c, b, a);
+            var gri = uli.AddDays((c / 100) - ((c / 100) / 4) - 2);
+            Console.WriteLine($"По современному календарю - {gri}");
+        }
+}
