@@ -1,0 +1,24 @@
+using System;
+class Program
+{
+    static void Main(string[] args)
+        {
+            int[] array = new int[10];
+            Random rand = new Random();
+            Console.WriteLine("Начальный массив:");
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = rand.Next(-10, 10);
+                Console.WriteLine(array[i]);
+            }
+            Console.WriteLine("Измененный массив:");
+            for (int i=array.Length-1; i>=0; i--)
+            {
+                int x = rand.Next(i);
+                int y = array[i];
+                array[i] = array[x];
+                array[x] = y;
+                Console.WriteLine(array[i]);
+            }
+        }
+}
