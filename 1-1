@@ -1,0 +1,13 @@
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("x = ");
+        double x = double.Parse(Console.ReadLine());
+        double v = x * 0.001;
+        double p = 1030; 
+        double m = v * p;
+        Console.WriteLine(m);
+    }   
+}
