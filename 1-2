@@ -1,0 +1,17 @@
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Введите значение a = ");
+        int a = int.Parse(Console.ReadLine());
+        Console.Write("Введите значение b = ");
+        int b = int.Parse(Console.ReadLine());
+        Console.Write("Введите значение c = ");
+        int c = int.Parse(Console.ReadLine());
+        if  (a < b) 
+             if (b < c) Console.WriteLine("неравенство a < b < c выполняется");
+             else Console.WriteLine("неравенство a < b < c не выполняется");
+        else Console.WriteLine("неравенство a < b < c не выполняется");
+    } 
+}
