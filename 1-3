@@ -1,0 +1,19 @@
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        int T = 0;
+        Console.Write("x = ");
+        int x = int.Parse(Console.ReadLine());
+        int[] A = new int[20];
+        Random rand = new Random();
+        for (int i = 0; i < A.Length; i++)
+        {
+            A[i] = rand.Next(-10, 10);
+            if (A[i] == x) T = 1;
+        }
+        if (T >= 1) Console.WriteLine("массив содержит данное число");
+        else Console.WriteLine("массив не содержит данное число");
+    }
+}
