@@ -1,0 +1,16 @@
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        int sum = 0;
+        Console.Write("Введите число: ");
+        char[] a = Console.ReadLine().ToCharArray();
+        for (int i = 0; i < a.Length; i++)
+        {
+            int sifra = Convert.ToInt32(a[i].ToString());
+            if (sifra % 2 == 0) sum = sum + sifra;  
+        }
+        Console.WriteLine(sum);
+    }
+}
