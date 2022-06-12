@@ -1,0 +1,14 @@
+using System;
+class Program
+{
+    static void Main(string[] args)
+        {
+            Console.Write("Введите год - ");
+            int n=int.Parse(Console.ReadLine());
+            for (int i=1;i<=12;i++)
+            {
+                DateTime x=new DateTime(n,i,DateTime.DaysInMonth(n,i));
+                Console.WriteLine($"{x.Month} месяц: {x.Day - (7 + (int)x.DayOfWeek - 4) % 7} число");
+            }
+        }
+}
