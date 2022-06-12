@@ -1,0 +1,35 @@
+using System;
+class Program
+{
+    static void Main(string[] args)
+        {
+            Console.WriteLine("Компьютер загадывает число от 1 до n. Попробуйте угадать");
+            Console.Write("Введите число n - ");
+            int n=int.Parse(Console.ReadLine());
+            Console.Write("Введите кол-во попыток, за которое угадаете - ");
+            int k=int.Parse(Console.ReadLine());
+            Random rand = new Random();
+            int x=rand.Next(1,n+1);
+            for (int i=1;i<=k;i++)
+            {
+                Console.WriteLine($"Введите число от 1 до {n}:");
+                int y=int.Parse(Console.ReadLine());
+                if (i == k && y!=x) 
+                    Console.WriteLine(" Не угадали. Попытки закончились");
+                if (i != k)
+                {
+                    if (y == x)
+                    {
+                        Console.WriteLine("Вы угадали!");
+                        break;
+                    }
+                    if (y < x)
+                        Console.WriteLine($"Не угадали. Загаданное число больше. Осталось попыток:{k - i}");
+                    if (y > x)
+                        Console.WriteLine($"Не угадали. Загаданное число меньше. Осталось попыток:{k - i}");
+                } 
+                if (i==k && y == x)
+                    Console.WriteLine("Вы угадали!");
+            }
+        }
+}
